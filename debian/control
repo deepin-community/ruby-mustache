@@ -1,0 +1,32 @@
+Source: ruby-mustache
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Martin Ueding <dev@martin-ueding.de>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb,
+               ruby-minitest
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-mustache.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-mustache
+Homepage: https://github.com/defunkt/mustache
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-mustache
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ${misc:Depends}
+Description: Mustache is a framework-agnostic way to render logic-free views
+ Inspired by ctemplate, Mustache is a framework-agnostic way to render
+ logic-free views. (As in model-view-controller.)
+ .
+ As ctemplates says, "It emphasizes separating logic from presentation:
+ it is impossible to embed application logic in this template
+ language."
+ .
+ Think of Mustache as a replacement for your views. Instead of views
+ consisting of ERB or HAML with random helpers and arbitrary logic,
+ your views are broken into two parts: a Ruby class and an HTML
+ template.

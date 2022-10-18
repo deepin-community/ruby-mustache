@@ -1,0 +1,27 @@
+From: =?utf-8?q?C=C3=A9dric_Boutillier?= <cedric.boutillier@gmail.com>
+Date: Thu, 6 Feb 2020 12:49:05 +0100
+Subject: Fix encoding error in test suite with Ruby 1.9 and 2.0
+
+Origin: vendor
+Forwarded: no
+Reviewed-By: Sebastien Badia <seb@sebian.fr>
+Last-Update: 2015-04-10
+
+Fixes a failing test with Ruby 1.9
+---
+ test/helper.rb | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/test/helper.rb b/test/helper.rb
+index 77167bf..494b586 100644
+--- a/test/helper.rb
++++ b/test/helper.rb
+@@ -3,6 +3,8 @@ SimpleCov.start do
+   add_filter '/test/'
+ end
+ 
++Encoding.default_external = Encoding::UTF_8 if defined? Encoding
++
+ require 'minitest/autorun'
+ 
+ Dir[File.dirname(__FILE__) + '/fixtures/*.rb'].each do |f|

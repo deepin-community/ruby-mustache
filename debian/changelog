@@ -1,0 +1,79 @@
+ruby-mustache (1.1.1-2) unstable; urgency=medium
+
+  * Team upload
+  * Move debian/watch to gemwatch.debian.net
+  * Add 003_no_simplecov.patch to remove usage of simplecov in tests
+  * Add 004_fix_race_condition_tests.patch to fix order-related test failures
+    (Closes: #954503)
+  * Use the rake method to run tests
+  * Update Team name
+  * Explicitly mention that d/rules does not require root
+  * Set debhelper-compat level to 13
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 27 Sep 2020 00:15:55 +0200
+
+ruby-mustache (1.1.1-1) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Cédric Boutillier ]
+  * New upstream version 1.1.1
+  * Use secure copyright file specification URI.
+  * Use secure URI in debian/watch.
+  * Bump debhelper from old 7 to 12.
+  * Run wrap-and-sort on packaging files
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Clean coverage results
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 06 Feb 2020 12:32:23 +0100
+
+ruby-mustache (1.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Release to unstable.
+  * Imported Upstream version 1.0.2
+  * Remove superfluous dependencies (sinatra, rack)
+    Thanks to Sebastian Boehm <sebastian@sometimesfood.org> (Closes: #799664)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sun, 27 Sep 2015 05:48:40 +0000
+
+ruby-mustache (1.0.1-1~exp1) experimental; urgency=medium
+
+  * Team upload.
+  * Target experimental and build with ruby 2.2.
+  * Refresh patchs for new upstream version (and disable codeclimate)
+  * Add ruby-minitest to Build-Depends for ruby2.2
+  * Bump Standards-Version to 3.9.6 (no further changes)
+  * Update Vcs-Browser to cgit URL and HTTPS
+
+ -- Sebastien Badia <seb@sebian.fr>  Fri, 10 Apr 2015 16:48:16 +0200
+
+ruby-mustache (0.99.4-4) unstable; urgency=low
+
+  * Team upload
+  * Bump Standards-Version: to 3.9.4 (no changes needed)
+  * Add Vcs-* fields in debian/control
+  * Extend fix-encoding patch to all versions of Ruby defining Encoding
+    This fixes FTBFS with ruby2.0 (Closes: #720239)
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 25 Oct 2013 16:32:24 +0200
+
+ruby-mustache (0.99.4-3) unstable; urgency=low
+
+  * Team upload.
+  * Bump build dependency on gem2deb to >= 0.3.0~.
+  * Bump Standards-Version: to 3.9.3 (no changes needed)
+  * Update debian/copyright to DEP-5 copyright-format/1.0
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Sat, 30 Jun 2012 15:33:22 +0200
+
+ruby-mustache (0.99.4-2) unstable; urgency=low
+
+  * Initial release (Closes: #643674)
+
+ -- Martin Ueding <dev@martin-ueding.de>  Wed, 28 Sep 2011 16:17:52 +0200

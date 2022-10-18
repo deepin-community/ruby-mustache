@@ -1,0 +1,15 @@
+Description: remove usage of simplecov in tests
+Forwarded: not-needed
+Author: Cédric Boutillier <boutil@debian.org>
+Last-Update: 2020-09-27
+--- a/test/helper.rb
++++ b/test/helper.rb
+@@ -1,8 +1,3 @@
+-require 'simplecov'
+-SimpleCov.start do
+-  add_filter '/test/'
+-end
+-
+ Encoding.default_external = Encoding::UTF_8 if defined? Encoding
+ 
+ require 'minitest/autorun'
